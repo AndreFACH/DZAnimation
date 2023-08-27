@@ -1,0 +1,88 @@
+body {
+  background-color: grey;
+}
+
+.menu {
+    color: wheat;    
+}
+
+.menu_all {
+  t
+}
+
+
+img {
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+}
+
+.menu-wrap {
+  float: right;
+  position: fixed;
+  background: white;
+  width: 300px;
+  padding: 50px 20px 20px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%); 
+  transition: all 0.9s;   
+}
+  
+#opener:checked ~ .menu-wrap {
+  transform: translateX(0);
+}
+
+#opener {
+  position: absolute;
+  opacity: 0;
+}
+
+.opener {
+  position: relative;
+  float: right;
+  color: yellow;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: blue;
+  display: block;
+  z-index: 1;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.opener:before, .opener:after, .opener span {
+  position: absolute;
+  content: ;
+  width: 18px;
+  height: 2px;
+  background: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.75s;
+}
+
+.opener:before {
+  top: 30%;
+}
+
+.opener:after {
+  top: 65%;
+}
+
+#opener:checked + .opener span {
+  width: 0;
+}
+
+#opener:checked + .opener:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: 50%;
+}
+
+#opener:checked + .opener:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  top: 50%;
+}
