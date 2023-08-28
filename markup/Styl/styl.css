@@ -1,15 +1,26 @@
 body {
   background-color: grey;
+  padding: 0 20px;
 }
 
 .menu {
-    color: wheat;    
+  color: wheat;   
 }
 
 .menu_all {
-  t
+  list-style: none; 
 }
 
+.menu_all img {
+  margin: 0 auto;
+}
+
+.menu_all a {
+  padding: 20px;
+  display: inline-block;
+  font-size: 50px;
+  text-decoration: none
+}
 
 img {
   width: 50px;
@@ -21,13 +32,13 @@ img {
   float: right;
   position: fixed;
   background: white;
-  width: 300px;
+  width: 500px;
   padding: 50px 20px 20px;
   top: 0;
   bottom: 0;
   right: 0;
-  transform: translateY(100%); 
-  transition: all 0.9s;   
+  transform: translateX(100%); 
+  transition: all 0.9s;     
 }
   
 #opener:checked ~ .menu-wrap {
@@ -40,6 +51,7 @@ img {
 }
 
 .opener {
+  margin: 25px;
   position: relative;
   float: right;
   color: yellow;
@@ -55,7 +67,7 @@ img {
 
 .opener:before, .opener:after, .opener span {
   position: absolute;
-  content: ;
+  content: '';
   width: 18px;
   height: 2px;
   background: black;
@@ -66,7 +78,7 @@ img {
 }
 
 .opener:before {
-  top: 30%;
+  top: 35%;
 }
 
 .opener:after {
@@ -86,3 +98,46 @@ img {
   transform: translate(-50%, -50%) rotate(-45deg);
   top: 50%;
 }
+
+button {
+  background: red;
+  width: 100px;
+  height: 50px;
+  border: 6px solid red;
+  border-radius: 99px;
+  box-shadow: 3px 4px 18px rgba(66, 31, 90, 0.842);
+  cursor: pointer;
+}
+
+button:hover {
+  background: blue;
+  color: yellow;
+  box-shadow: 3px 4px 18px rgba(117, 198, 11, 0.842);
+}
+
+.btn {
+  padding: 13px 60px;
+}
+
+.content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  overflow: auto;
+  transition: all 0.9s;
+  padding-right: 500px;
+  text-align: center;
+  padding-top: 300px;
+}
+
+#opener:checked ~ .content {
+  left: -500px;
+}
+
+a:hover {
+  color: yellow;
+}
+
