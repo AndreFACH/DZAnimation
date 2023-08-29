@@ -120,7 +120,7 @@ button:hover {
 }
 
 .content {
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   top: 0;
@@ -133,8 +133,9 @@ button:hover {
   padding-top: 300px;
 }
 
-#opener:checked ~ .content {
-  left: -500px;
+#opener:checked ~ .content, #opener:checked ~ .opener  {
+  transform: translateX(-500px);
+  transition: all 2s;
 }
 
 a:hover {
